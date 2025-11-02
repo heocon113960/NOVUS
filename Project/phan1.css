@@ -1,0 +1,105 @@
+#navgiua {
+  display: flex;
+  align-items: center;
+  padding-top: 40.5px;
+  padding-bottom: 40.5px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.nav2
+{
+margin-right: 67.33px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+width: 94px;
+height: 19px;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+
+.nav1
+{
+margin-left: 106px;
+margin-right: 67.33px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+width: 94px;
+height: 19px;
+flex: none;
+order: 0;
+flex-grow: 0;
+
+color:#40C2FF;
+}
+
+
+.nav3
+{
+margin-right: 67.33px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+width: 94px;
+height: 19px;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+		#navphai
+		{
+			padding-top: 12px;
+			padding-bottom: 12px;
+			padding-left: 75px;
+		}
+
+#navtrai {
+  display: flex;
+  align-items: center;
+
+}
+
+.nut1 button,
+.nut2 button {
+margin: 0 auto;
+width: 106px;
+height: 46px;
+border-radius: 35px;
+align-items: center;
+border: none;
+}
+
+#navtong {
+  display: flex;
+  padding: 0px 75px;
+  align-items: center;
+  position: absolute;
+  width: 90%;
+
+  height: 124px;
+  left: 0px;
+  top: 0px;
+
+
+  background: linear-gradient(90deg, #FFFFFF 0%, #9ADDFF 100%);
+}
+
+
+.nav1,
+.nav2,
+.nav3 {
+  white-space: nowrap;
+}
