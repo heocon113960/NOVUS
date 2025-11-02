@@ -1,0 +1,160 @@
+.phan2 {
+  position: absolute;
+  width: 100%;
+  height: 704px;
+  left: 0;
+  top: 141px;
+  border:solid 1px #9ADDFF;
+}
+
+.banner {
+  position: absolute;
+  width: 100%;
+  height: 596px;
+  left: 0;
+  top: 0;
+  background: linear-gradient(180deg, #97DCFF 0%, #FFFFFF 44.23%);
+    border:solid 1px #9ADDFF;
+}
+
+.khungnho
+{
+position: absolute;
+width: 1240px;
+height: 441px;
+left: 100px;
+top: 59px;
+
+
+}
+
+
+.timvieclam
+{
+position: absolute;
+width: 502px;
+height: 72px;
+left: 0px;
+top: 12px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 800;
+font-size: 74px;
+line-height: 72px;
+color: #FFFFFF;
+
+text-shadow: 0px 4px 40px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+
+}
+
+.timmotcongviec
+{
+position: absolute;
+width: 831px;
+height: 128px;
+left: 0px;
+top: 115px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 54px;
+line-height: 72px;
+color: #1F1F2F;
+
+
+}
+
+.hangtramcohoi
+{
+position: absolute;
+width: 471px;
+height: 64px;
+left: calc(50% - 471px/2 - 384.5px);
+top: 294px;
+
+font-family: 'Raleway';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 34px;
+
+color: #585858;
+
+
+}
+
+    .anhpe{
+      width:572px;
+      height:537px;
+      border-radius:8px;
+      overflow:hidden;
+      background-repeat:no-repeat;
+      background-position:center center;
+      background-size:cover;
+      box-shadow: none; 
+      background-image: url('banner.png');
+      margin-left: 870px;
+    }
+
+
+.search-box {
+  width: 1012px;
+  height: 58px;
+  margin: 620px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 50px;
+  padding: 0 8px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 16px;
+}
+
+.search-icon {
+  font-size: 18px;
+  margin-right: 12px;
+  color: #999;
+}
+
+.search-box input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.nuttimkiem {
+  height: 42px;
+  padding: 0 24px;
+  margin-right: 32px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nuttimkiem:hover {
+  background-color: #005bb5;
+}
+
+
+
+
+.searchne
+{
+  width: 1012px;
+height: 64px;
+}
