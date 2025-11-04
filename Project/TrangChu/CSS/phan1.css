@@ -1,0 +1,125 @@
+#navtong {
+  display: flex;
+  align-items: center;
+  position: relative; 
+  width: 100%; 
+  max-width: 1440px; 
+  height: 124px;
+  margin: 0 auto; 
+  padding-left: 3px;
+  background: linear-gradient(90deg, #FFFFFF 0%, #9ADDFF 100%);
+}
+
+header {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.phan1_1 {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+#navgiua {
+  display: flex;
+  align-items: center;
+  padding-top: 52.5px;
+  padding-bottom: 52.5px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.nav2
+{
+margin-right: 46px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+width: 94px;
+height: 19px;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+
+.nav1
+{
+margin-left: 106px;
+margin-right: 46px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+width: 94px;
+height: 19px;
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+}
+
+
+.nav3
+{
+margin-right: 186px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px;
+gap: 10px;
+width: 94px;
+height: 19px;
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+#navphai
+		{
+			padding-top: 12px;
+			padding-bottom: 12px;
+      padding-left: 31.5px;
+		}		
+
+#navtrai {
+  display: flex;
+  align-items: center;
+
+}
+
+.nut1 button
+{
+margin-left: 40px;
+width: 106px;
+height: 46px;
+border-radius: 35px;
+align-items: center;
+border: none;
+}
+
+.nut2 button 
+{
+margin: 0 auto;
+width: 106px;
+height: 46px;
+border-radius: 35px;
+align-items: center;
+border: none;
+}
+
+
+.nav1,
+.nav2,
+.nav3 {
+  white-space: nowrap;
+  
+}

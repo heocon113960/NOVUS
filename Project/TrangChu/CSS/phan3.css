@@ -1,0 +1,193 @@
+
+
+.phan3 {
+  width: 100%;
+
+}
+
+
+
+.hl {
+  background: rgba(255, 255, 255, 0.06);
+
+  padding-left:137px ;
+  padding-right:137px ;
+  padding-bottom:42px ;
+
+}
+
+.congvieclam
+{
+    font-size: 64px;
+  color:#0379FC;
+  margin:25px 0;
+
+}
+
+.jobstable table td, .jobstable table th {
+  vertical-align: top;
+}
+
+
+.taisaokhongchay {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-start;
+  padding: 0; 
+
+}
+
+
+
+
+.hh2 {
+  font-size: 19px;
+  color: #565656;
+  margin: 0; 
+}
+
+.thatim
+{
+  cursor: pointer;
+}
+
+
+
+#jobsTable {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 65px;
+  row-gap: 40px;    
+  background-color: #EDF9FF;
+  padding-top:30px ;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 8px;
+
+}
+
+
+.quanlianh
+{
+  padding-top: 18px;
+  background-color: #EDF9FF;
+  padding-bottom: 18px;
+}
+
+
+.job-card2 {
+  flex: 0 0 calc(50% - 32.5px);
+}
+
+.job-card3 {
+  width: 100%;
+  height: 131px;
+  border-radius: 8px;
+
+  border-collapse: collapse;
+  background-color: white; 
+  overflow: hidden;
+  border: 1px solid #808080;
+
+
+}
+
+.job-card td {
+  vertical-align: middle;
+  border: none;
+  padding: 8px;
+  
+}
+
+
+.joblogo {
+  width: 116px;
+  height: 106px;
+  text-align: center;
+}
+.joblogo img {
+  width: 116px;
+  height: 106px;
+}
+
+
+.nghe {
+  width: 350px;
+  vertical-align: top;
+}
+.nghetl {
+  margin: 0;
+  font-size: 19px;
+  color: #565656;
+}
+
+
+.traitim {
+  width: 50px;
+  text-align: center;
+
+}
+.thatim {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding-top: 20px;
+  padding-right: 19px;
+}
+.thatim img {
+  width: 32px;
+  height: 32px;
+}
+
+
+.thongtin {
+  height: 80px;
+}
+.ttw {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.ttcty {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #808080;
+}
+.ttduoi {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.traloi {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #808080;
+  margin-top: 5px;
+}
+.dadang {
+  font-size: 16px;
+  color: #808080;
+  white-space: nowrap;
+  padding-right: 19px;
+}
+
+.job-card3:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: all 0.15s ease;
+  cursor: pointer;
+
+
+}
+
+
+.tienluong {
+  color: #1655F4;
+
+}
+
+
