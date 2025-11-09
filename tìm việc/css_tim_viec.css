@@ -1,0 +1,463 @@
+
+    /* === THIẾT LẬP CƠ BẢN === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { font-size: 16px; }
+
+body {
+    font-family: 'Baloo 2', 'Segoe UI', Tahoma, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+/* === PHẦN ĐẦU TRANG === */
+.header {
+    background: linear-gradient(135deg, #E8F4FA 0%, #FFF 100%);
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    z-index: 100;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+.logo { display: flex; align-items: center; flex-shrink: 0; }
+
+.logo-img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    image-rendering: crisp-edges;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+    align-items: center;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active { color: #60B8E8; }
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #60B8E8;
+}
+
+.auth-buttons { display: flex; gap: 15px; flex-shrink: 0; }
+
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-login {
+    background: #3FA9F5;
+    color: white;
+}
+
+.btn-login:hover {
+    background: #2E8FD8;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(63, 169, 245, 0.3);
+}
+
+.btn-register {
+    background: white;
+    color: #3FA9F5;
+    border: 2px solid #3FA9F5;
+}
+
+.btn-register:hover {
+    background: #3FA9F5;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(63, 169, 245, 0.3);
+}
+
+/* === PHẦN BANNER CHÍNH === */
+.hero {
+    background: radial-gradient(circle at center , #FFFFFF 0%, #FFFFFF 40%,   #39BAFF 100%);
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 200px;
+    position: relative;
+    z-index: 1;
+}
+
+.whale-icon {
+    width: 80px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
+}
+
+.whale-right { animation-delay: 1.5s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.hero-main { flex: 1; text-align: center; z-index: 2; }
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 800;
+    color: #0066B3;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    font-family: 'Baloo 2', sans-serif;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0066B3;
+    letter-spacing: 1px;
+    font-family: 'Baloo 2', sans-serif;
+}
+
+.person-main {
+    width: 430px;
+    height: 287px;
+    filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.2));
+    right: 40px;
+    margin-bottom: 0;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+}
+
+/* === PHẦN BÀI VIẾT NỔI BẬT === */
+.section-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: #0066B3;
+    font-family: Raleway;
+    padding-top: 0;
+}
+
+.posts-grid {
+    display: grid;
+    gap: 18px;
+    max-width: 621px;
+    padding-top: 23px;
+}
+
+.post-card {
+    background: white;
+    border-radius: 12px;
+    transition: all 0.3s;
+    cursor: pointer;
+    display: flex;
+    gap: 18px;
+    overflow: hidden;
+    width: 619px;
+    height: 138px;
+}
+
+.post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.post-image {
+    width: 184px;
+    height: 138px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.post-card:hover .post-image img { transform: scale(1.05); }
+
+.post-content {
+    text-align: justify;
+    font-size: 10px;
+    color: #737373;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.post-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0066B3;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    font-family: 'Baloo 2', sans-serif;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post-meta {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.post-excerpt {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+    .header-content { flex-wrap: wrap; gap: 20px; }
+    .nav ul { gap: 30px; }
+    .hero-content { flex-direction: column; gap: 30px; }
+    .whale-icon { display: none; }
+    .hero-title { font-size: 36px; }
+    .posts-grid { max-width: 100%; }
+}
+
+@media (max-width: 768px) {
+    .nav ul { gap: 20px; font-size: 14px; }
+    .auth-buttons { width: 100%; justify-content: center; }
+    .hero-title { font-size: 32px; }
+    .hero-subtitle { font-size: 16px; }
+    .person-main { width: 220px; right: 20px; top: 8px; position: absolute; }
+    .section-title { font-size: 28px; }
+    .post-card { flex-direction: column; }
+    .post-image { width: 100%; height: 180px; }
+}
+
+@media (max-width: 576px) {
+    .logo-img { height: 60px; }
+    .nav ul { flex-direction: column; gap: 10px; }
+    .hero-title { font-size: 28px; }
+    .hero-subtitle { font-size: 14px; }
+    .featured-posts { padding: 40px 0; }
+    .section-title { font-size: 24px; }
+}
+.bvnbbvhd
+{
+    height: auto;
+    display: flex;
+    gap : 9px;
+    padding-left: 137px;
+    padding-right: 137px;
+    margin-top: 37px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 58px;
+}
+ body
+        {
+            font-family:'Inter';
+            padding-bottom: 58px;
+        }
+    .baivietnoibat
+    {
+        border: 1px solid #9b9b9b;
+        border-radius: 2px;
+        width: 638px;
+        height: 962px;
+    }
+    .tieudenoibat
+    {
+        color: #0379FC;
+        font-family: 'Raleway';
+        font-size: 40px;
+        font-style: italic;
+        font-weight: bolder;
+        margin-bottom: 13px;
+        text-align: left;
+    }
+    .baiviethangdau
+    {
+        width: 522px;
+        height: auto;
+        border: 1px solid #9b9b9b;
+        border-radius: 2px;;
+    }
+    .baiviethangdau p
+    {
+        margin-bottom: 13px;
+    }
+    .baiviethangdau img
+    {
+        width: 508.9px;
+        height: 286px;
+    }
+    .daudebaiviet
+    {
+        color: #0379FC;
+        font-style: italic;
+    }
+    .daudechinh
+    {
+        font-size: 30px;
+        font-weight:800;
+    }
+    .daudephu
+    {
+        font-size: 20px;
+        font-weight: 800;
+    }
+    .tomtat
+    {
+        text-align: justify;
+        font-size: 10px;
+        font-style: italic;
+        font-weight: bolder;
+        width: 509px;
+        height: auto;
+        color: #737373;
+    }
+    .khungbai
+    {
+        padding-left: 137px;
+        padding-right: 137px;
+    }
+    .baivietmoinhat
+    {
+        justify-content: center;
+        align-items: center;
+        width: 1164px;
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+        
+    } 
+    .baiviet
+    {
+        width: 384px;
+        height: auto;
+        margin-bottom: 27px;
+    }
+    .anhbaiviet
+    {
+        width: 384px;
+        height: 196px;
+        border-radius: 4px;
+    }
+    .tieudebaiviet
+    {
+        display: block;
+        text-decoration: none;
+        font-weight: bold;
+        margin-top: 19px;
+        margin-bottom: 20px;
+        font-size: 20px;
+        text-align: justify;
+        color: #666666;
+        width: 378px;
+        height: 40px;
+    }
+    .tieudebaiviet:hover
+    {
+        color: #0379FC;
+    }
+    .tieudebaiviet:visited
+    {
+        color:rgb(155, 149, 149);
+    }
+    .ghichu
+    {
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+    }
+    .tenguoidang
+    {
+        font-size: 15px;
+        color: #3589FD;
+    }
+    .time
+    {
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .time img
+    {
+        display: block;
+        width: 10px;
+        height:auto;
+        margin-right: 2.83px;
+    }
+    .view
+    {
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .view img
+    {
+        width: 12px;
+        height: auto;
+        display: block;
+        margin-right: 2px;
+    }
+    .hieuungnoi
+    {
+        transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    }
+    footer
+    {
+        background-color: #edf9ff;
+    }
