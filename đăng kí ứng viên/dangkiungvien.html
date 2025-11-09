@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>dang_ki_ung_tuyen</title>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href = "dangkiungvien.css" rel="stylesheet">
+    </head>
+    <body>
+        <header></header>
+        <section class = "dangkiungtuyen">
+            <form>
+                <h1 class ="dangki">Đăng kí ứng viên</h1>
+            <section class = "nhapthongtin">
+                <input required class ="hovaten" type = "text" placeholder="Họ và tên">
+            <input required class = "email" type="email" placeholder="Email">
+
+            <section class = "password">
+            <div class = "nhappassword"><input id = "mk" required type = "password" placeholder="Nhập mật khẩu"><span id ="battatmk"><img src = "Eye (1).png"></span></div>
+            <div class = "nhappassword"><input id = "nhaplai" required type= "password" placeholder="Nhập lại mật khẩu"><span id ="anhienmk"><img src = "Eye (1).png"></span></div>
+             </section>
+
+             <input required class = "sdt" type="text" placeholder="Số điện thoại">
+             <div class ="thongbao"><input type="checkbox"><span>Luôn nhận thông báo từ NOVUS</span></div>
+             <div class ="thoathuan"><input required type="checkbox"><p>Tôi đồng ý với việc xử lý và cung cấp thông tin dữ liệu cá nhân, đồng thời đã đọc và đồng ý với <a>Chính sách</a> và <a>Quy định bảo mật</a> của NOVUS</p></div>
+             <div class ="or"><span>hoặc</span></div>
+             <button class ="google" type= "button" aria-label= "Đăng nhập bằng google"><a href = "https://myaccount.google.com/"><img src = "Google.png">Google</a></button>
+            <div class ="ntd">Bạn là nhà tuyển dụng? Đăng ký&nbsp;<a>Nhà Tuyển Dụng</a>&nbsp;ngay</div>
+            </section>
+            <div class ="nutdangki"><input type ="submit" value="Đăng kí"></div>
+            </form>
+             <section class ="anhdangki">
+            <img src ="Banner_doc.png">
+            </section>
+        </section>
+        <script>
+                const password= document.getElementById('mk');
+                const battatpass = document.getElementById('battatmk');
+                battatpass.addEventListener('click', () =>
+                {
+                    if (password.type === 'password')
+                {
+                    password.type = 'text';
+                    battatpass.innerHTML = '<img src = "Eye_off.png">';
+                }
+                else 
+                {
+                    password.type = 'password';
+                    battatpass.innerHTML = '<img src = "Eye (1).png">';
+                }
+            });
+            const pass= document.getElementById('nhaplai');
+                const anhienpass = document.getElementById('anhienmk');
+                anhienpass.addEventListener('click', () =>
+                {
+                    if (pass.type === 'password')
+                {
+                    pass.type = 'text';
+                    anhienpass.innerHTML = '<img src = "Eye_off.png">';
+                }
+                else 
+                {
+                    pass.type = 'password';
+                    anhienpass.innerHTML = '<img src = "Eye (1).png">';
+                }
+            });
+            </script>
+    </body>
+</html>
