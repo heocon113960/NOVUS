@@ -1,4 +1,29 @@
-  const jobst = [
+
+
+
+function lapAnhLienTuc() {
+  const img1 = document.getElementById("img1");
+  const img2 = document.getElementById("img2");
+  const img3 = document.getElementById("img3");
+
+  setInterval(() => {
+    const src1 = img1.src;
+    const src2 = img2.src;
+    const src3 = img3.src;
+
+
+    img1.src = src3;
+    img2.src = src1;
+    img3.src = src2;
+  }, 5000);
+}
+
+window.onload = lapAnhLienTuc;
+
+
+
+ 
+ const jobst = [
     {
       nghe: "Kỹ Sư Phát Triển Phần Mềm",
       cty: "TMTeam",
@@ -47,7 +72,8 @@
     </td>
 
     <td class="traitim" rowspan="2">
-      <button class="thatim" type="button" onclick="toggleHeart(this)">
+<button class="thatim" type="button" onclick="toggleHeart(this)">
+
         <img src="Img/traitim.png" alt="Yêu thích">
       </button>
     </td>
@@ -74,3 +100,9 @@
     `;
     jobstable.appendChild(card);
   });
+let currentIndex = 0;
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % filledd.length;
+  jobstable.style.transform = `translateX(-${currentIndex * 100}%)`;
+}, 5000);
+

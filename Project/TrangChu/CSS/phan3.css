@@ -5,6 +5,13 @@
 
 }
 
+.thatim img {
+  transition: transform 0.3s ease;
+}
+
+.thatim img:hover {
+  transform: scale(1.1);
+}
 
 
 .hl {

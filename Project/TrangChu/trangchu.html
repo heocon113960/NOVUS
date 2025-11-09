@@ -6,6 +6,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
+
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+
 	<style>
 
 body {
@@ -16,11 +20,14 @@ body {
 </style>
 </head>
 <body>
+<link rel="stylesheet" href="CSS/POPutLogin.css">
+<link rel="stylesheet" href="CSS/DangNhapGG.css">
 <link rel="stylesheet" href="CSS/phan1.css">
 <link rel="stylesheet" href="CSS/phan2.css">
 <link rel="stylesheet" href="CSS/phan3.css">
 <link rel="stylesheet" href="CSS/phan4.css">
 <link rel="stylesheet" href="CSS/phan5.css">
+
 
 <audio src="nhacnen.mp3" autoplay loop></audio>
 
@@ -29,6 +36,38 @@ body {
   <section class="phan1_1">
 <nav>
 
+
+<div id="loginPopup" class="popup">
+
+  <div class="popup-content">
+    <span class="close" onclick="closeLoginPopup()">&times;</span>
+    <br>
+    <h1 class="chaomungNOVUs">NOVUS CHÀO MỪNG BẠN</h1>
+    <form>
+      <input type="text" placeholder="Tên đăng nhập" >
+      <input type="password" placeholder="Mật khẩu" >
+<div class="quanly2nut">
+  <center>
+     <button type="submit" class="nutdangnhap" onclick="kiemTraDangNhap()"><strong>ĐĂNG NHẬP</strong></button>      
+    <button type="button"  class="google" onclick="signInWithGoogle()"><img src="IMG/google.png" width="26px" height="26px" class="anhgg"><strong>Google</strong></button>
+     
+   </center>
+
+
+</div>
+   <p id="thongbao" style="color: red; display: none;">Sai Tài Khoản hoặc Mật Khẩu</p>
+  <div class="phandkqmk">
+    <a href="#" class="quenmatkhau">Quên mật khẩu?</a>
+    <span> | </span>
+    <a href="#" class="dangkyngay">Đăng ký ngay</a>
+  </div>
+</form>
+  </div>
+</div>
+
+
+
+
 <div id="navtong">
 <div id="navphai"><span><img src="Img/logo.png" width="250px" height="81px"></img></span></div>
 <div id="navgiua" style="display:flex;align-items: center;">
@@ -36,16 +75,21 @@ body {
 <div class="nav2"><a href="../TimViec/VieclamChinhThucTamThoi.html" style="text-decoration: none;color:#000000;">TÌM VIỆC</a></div>
 <div class="nav2">THẢO LUẬN</div>
 <div class="nav3">LIÊN HỆ</div>
+</div>
 <div id="navtrai">
-	<div class="nut1" style="margin-right: 40px;"><button style="color: #FFFFFF;background: #1BA0F4;">ĐĂNG BÀI</button></div>
-	<div class="nut2"><button style="color: #1BA0F4;background-color: #FFFFFF;">ĐĂNG NHẬP</button></div>
+<div class="dangnhap_dangbai">
+<button onclick="openLoginPopup()" style="cursor: pointer;">Đăng nhập</button>
+
 </div>
+	<div class="dangky_dangxuat"><button>ĐĂNG KÝ</button></div>
 </div>
+<div id="user-info"></div>
 </div>
 </nav>
 </section>
 
 		</header>
+
 
 <div id="phan2_1">
 <section class="phan2" >
@@ -76,7 +120,11 @@ body {
 
 </div>
 <div class="quanlianh">
-<center><img src="Img/anhdai.png"><img src="Img/anhngan.png"><img src="Img/anhngan.png"></center>
+<center>
+  <img id="img1" src="Img/anhdai.png"  style="margin-right:6.93px;">
+  <img id="img2" src="Img/anhngan.png"  style="margin-right:6.93px;">
+  <img id="img3" src="Img/anhngan1.png" >
+</center>
 </div>
   </section>
  
@@ -88,8 +136,8 @@ body {
 <section class="phan5">
   <div class="banner2ne">
 
-<h1 class="h1ne">Tăng tốc hành trình tìm việc của bạn<br>cùng NOVUS — Tải lên CV ngay hôm<br>nay để chạm tới công việc mơ ước!</h1>
-<p class="pne">Tải CV của bạn lên ngay hôm nay<br>để gây ấn tượng với nhà tuyển dụng hàng đầu<br> và nắm bắt những cơ hội nghề nghiệp hấp dẫn nhất!</p>
+<h1 class="h1ne">Tăng tốc hành trình tìm việc của bạn<br>cùng NOVUS — Lựa chọn công việc<br>đúng với sở trường của bạn</h1>
+<p class="pne">Hãy là người đầu tiên ứng tuyển hay sớm nhất <br>ứng tuyển để có cơ hội lớn <br>Tìm Đến Tương Đi Đến Thành Công</p>
 <button class="nutnhanne"><strong>Tìm Việc</strong></button>
 
 </div>
@@ -163,5 +211,7 @@ Bài viết mới nhất
 <script src="JS/quanlyvieclamphan4.js"></script>
 <script src="JS/nutbam.js"></script>
 <script src="JS/nhac.js"></script>
+<script src="JS/SuLyDangNhap.js"></script>
+<script src="JS/DangNhapGG.js"></script>
 </body>
 </html>
