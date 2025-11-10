@@ -1,0 +1,39 @@
+.phan5 
+{
+    margin:0 0;
+  width: 1164px;
+  height: 388px;
+  background-color: #85BEFF;
+    margin-left:137.5px;
+    border-radius: 8px;
+        background-image:url('../Img/banner2.png');
+    background-size:624px 391px;
+      background-repeat: no-repeat;
+       background-position:right 0%;
+}
+.h1ne
+{
+    margin-left: 95px;
+    padding-top:20px;
+    font-size: 40px;
+    color:white;
+}
+.pne
+{
+    margin-left: 95px;
+    font-size: 22px;
+    color:white;
+}
+.nutnhanne
+{
+    width: 145px;
+    height: 40px;
+    margin-left: 95px;
+    color: #85BEFF;
+    font-size: 16px;
+    border-radius: 35px;
+    border: none;
+    background-color: white;
+
+
+}
