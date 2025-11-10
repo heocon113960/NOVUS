@@ -1,0 +1,427 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f0f8ff;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 0px 75px;
+  width: 100%;
+  position: relative;
+  max-width: 1440px;
+  height: 124px;
+  left: 0px;
+  top: 0px;
+
+  background: linear-gradient(90deg, #ffffff 0%, #9addff 100%);
+}
+.nav-links {
+  display: flex;
+  gap: 30px;
+  margin-left: 140px;
+}
+.nav-links a {
+  width: 150px;
+  height: 19px;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 19px;
+  text-align: center;
+  color: rgba(31, 31, 47, 0.8);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: rgba(64, 194, 255, 0.8);
+  transform: scale(1.05);
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: rgba(64, 194, 255, 0.8);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+.header-actions {
+  gap: 10px;
+  display: flex;
+  margin-left: auto;
+  width: 252px;
+  height: 46px;
+}
+.login-button {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 21px;
+  gap: 10px;
+  margin: 0 auto;
+  width: 130px;
+  height: 46px;
+  background: #1ba0f4;
+  border-radius: 35px;
+  flex: none;
+}
+.register-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 21px;
+  gap: 10px;
+  margin: 0 auto;
+  width: 130px;
+  height: 46px;
+  background: #ffffff;
+  border: 1px solid #40c2ff;
+  border-radius: 35px;
+}
+.login-button a {
+  text-decoration: none;
+  color: white;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+.register-button a {
+  text-decoration: none;
+  color: #40c2ff;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+.search-box {
+  width: 1012px;
+  height: 58px;
+  margin: 20px auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 50px;
+  padding: 0 8px;
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.25);
+}
+
+.search-input-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  padding-left: 16px;
+}
+
+.search-icon {
+  font-size: 18px;
+  margin-right: 12px;
+  color: #999;
+}
+
+.search-box input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: transparent;
+}
+
+.nuttimkiem {
+  height: 42px;
+
+  background-color: #0073e6;
+  color: white;
+  border: 1px solid #c3bbbb;
+  border-radius: 50px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100px;
+  height: 46px;
+}
+
+.nuttimkiem:hover {
+  background-color: #518cc7;
+}
+.banner {
+  background-color: #cceeff;
+  color: #003366;
+  font-size: 28px;
+  font-family: raleway, sans-serif;
+  font-weight: 1000;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  width: 80%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Bố cục hai cột */
+.item_2 {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Cột trái */
+.left-column {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 600px;
+}
+
+/* Cột phải */
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 350px;
+}
+
+/* Khối tiêu đề và thông tin chính */
+.job {
+  background-color: #e6f7ff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #003366;
+  margin-bottom: 25px;
+}
+
+.job-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 140px;
+  width: 700px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e6f7ff;
+  height: 42px;
+  width: 133px;
+}
+
+.info-item img {
+  width: 24px;
+  height: 24px;
+}
+
+.text .label {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.text .value {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0077b6;
+  margin: 0;
+}
+
+/* Hạn nộp hồ sơ */
+.deadline {
+  font-size: 13px;
+  color: #333;
+  width: 200px;
+  height: 35px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* Nút hành động */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  width: 768px;
+  height: 44px;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.apply {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  width: 582px;
+  height: 44px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.save {
+  background-color: white;
+  color: #007bff;
+  border: 2px solid #007bff;
+  width: 167px;
+  height: 44px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Mô tả công việc */
+#description {
+  background: #e6f7ff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#description h2 {
+  color: #003366;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#description ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+/* Thông tin công ty */
+.o2 {
+  background-color: #e6f7ff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.o2 p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Thông tin chung */
+.Thongtinchung {
+  background-color: #e6f7ff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Thongtinchung h2 {
+  font-size: 18px;
+  color: #003366;
+  margin-bottom: 15px;
+}
+
+.Thongtinchung ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.Thongtinchung li {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Công việc liên quan */
+.Tinlienquan {
+  background-color: #e6f7ff;
+  color: black;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Tinlienquan h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #003366;
+}
+
+.job-item2 {
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+
+.job-item2 h3 {
+  font-size: 16px;
+  margin: 0 0 5px;
+  color: #0077b6;
+}
+
+.company {
+  font-size: 14px;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.location {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 5px;
+  color: #333;
+}
+
+.location img {
+  width: 16px;
+  height: 16px;
+}
+
+.posted {
+  font-size: 13px;
+  color: #999;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .item_2 {
+    flex-direction: column;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .info-item {
+    width: 100%;
+  }
+}
