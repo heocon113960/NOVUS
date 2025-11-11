@@ -3,18 +3,33 @@
 }
             body
             {
+                transform: scale(0.5625);
                 font-family: 'Inter';
                 font-weight: 600;
+                color: transparent;
+                
             }
             header
             {
                 background-color: #40C2FF;
                 width: 1440px;
                 height: 56px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
             }
             input
             {
                 font-size: 20px;
+                padding-left: 15px;
+                text-indent: 0;
+            }
+            .khung
+            {
+                border: 1px solid black;
+                border-radius: 20px;
+                position: relative;
+                height: 1002px;
+                width: 1442px;
             }
             .dangkiungtuyen
             {
@@ -26,6 +41,7 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 43px;
+                position: absolute;
             }
             .dangki
             {
@@ -177,6 +193,7 @@
                 border: 1px solid #6b6b6b;
                 border-radius: 8px;
                 flex-shrink: 0;
+                cursor: pointer;
             }
             .thongbao input:checked
             {
@@ -207,6 +224,7 @@
                 border: 1px solid #6b6b6b;
                 border-radius: 8px;
                 flex-shrink: 0;
+                cursor: pointer;
             }
             .thoathuan input:checked
             {
@@ -224,6 +242,7 @@
             .thoathuan a 
             {
                 color: #016fff;
+                cursor: default;
             }
             .ntd
             {
@@ -238,6 +257,7 @@
             .ntd a
             {
                 color: #016fff;
+                cursor: pointer;
             }
             .nutdangki
             {
