@@ -9,6 +9,8 @@
 
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
 
 	<style>
 
@@ -21,6 +23,7 @@ body {
 </head>
 <body>
 <link rel="stylesheet" href="CSS/POPutLogin.css">
+<link rel="stylesheet" href="CSS/Popupdangky.css">
 <link rel="stylesheet" href="CSS/DangNhapGG.css">
 <link rel="stylesheet" href="CSS/phan1.css">
 <link rel="stylesheet" href="CSS/phan2.css">
@@ -44,17 +47,20 @@ body {
     <br>
     <h1 class="chaomungNOVUs">NOVUS CHÀO MỪNG BẠN</h1>
     <form>
-      <input type="text" placeholder="Tên đăng nhập" >
-      <input type="password" placeholder="Mật khẩu" >
+<input type="text" id="loginUsername" placeholder="Tên đăng nhập">
+<input type="password" id="loginPassword" placeholder="Mật khẩu">
+
 <div class="quanly2nut">
   <center>
-     <button type="submit" class="nutdangnhap" onclick="kiemTraDangNhap()"><strong>ĐĂNG NHẬP</strong></button>      
+<button type="button" class="nutdangnhap" onclick="kiemTraDangNhap(event)"><strong>ĐĂNG NHẬP</strong></button>      
     <button type="button"  class="google" onclick="signInWithGoogle()"><img src="IMG/google.png" width="26px" height="26px" class="anhgg"><strong>Google</strong></button>
      
    </center>
 
 
 </div>
+
+
    <p id="thongbao" style="color: red; display: none;">Sai Tài Khoản hoặc Mật Khẩu</p>
   <div class="phandkqmk">
     <a href="#" class="quenmatkhau">Quên mật khẩu?</a>
@@ -68,20 +74,67 @@ body {
 
 
 
+<div id="popupOverlay" class="overlay">
+  <div class="modal">
+    <span id="closeModalBtn" class="close2">&times;</span>
+        <section class = "dangkiungtuyen">
+
+            <table class="tabledk">
+                <tr>
+                    <td>
+            <form class="dkform">
+              <br>
+              <br>
+
+                <h1 class ="dangki">Đăng kí ứng viên</h1>
+            <section class = "nhapthongtin">
+                <input required class ="username" type = "text" placeholder="Tên Đăng Nhập">
+            <input required class = "email" type="email" placeholder="Email">
+
+            <section class = "password">
+            <div class = "nhappassword" id="nhappassne"><input id = "mk" required type = "password" placeholder="Nhập mật khẩu"><span id ="battatmk"><img src = "Img/Eye (1).png"></span></div>
+            <div class = "nhappassword"><input id = "nhaplai" required type= "password" placeholder="Nhập lại mật khẩu"><span id ="anhienmk"><img src = "Img/Eye (1).png"></span></div>
+             </section>
+
+             <input required class = "sdt" type="text" placeholder="Số điện thoại">
+                          <div class ="or"><span>hoặc</span></div>
+             <button class ="google" type= "button" aria-label= "Đăng nhập bằng google"  onclick="signInWithGoogle()"><img src = "Img/Google.png">Google</button>
+             <div class ="thongbao"><input type="checkbox"><span>Luôn nhận thông báo từ NOVUS</span></div>
+             <div class ="thoathuan"><input required type="checkbox"><p>Tôi đồng ý với việc xử lý và cung cấp thông tin dữ liệu cá nhân, đồng thời đã đọc và đồng ý với <a>Chính sách</a> và <a>Quy định bảo mật</a> của NOVUS</p></div>
+
+            <div class ="ntd">Bạn là nhà tuyển dụng? Đăng ký&nbsp;<a>Nhà Tuyển Dụng</a>&nbsp;ngay</div>
+            </section>
+            <div class ="nutdangki"><input type ="submit" value="Đăng kí" style="cursor: pointer;"></div>
+            </form>
+            </td>
+            <td>
+             <section class ="anhdangki">
+            <img src ="Img/Banner_doc.png">
+            </section>
+            </td>
+            </tr>
+            </table>
+</section>
+</div>
+</div>
+
+
+
+
 <div id="navtong">
 <div id="navphai"><span><img src="Img/logo.png" width="250px" height="81px"></img></span></div>
 <div id="navgiua" style="display:flex;align-items: center;">
 <div class="nav1"><a href="trangchu.html" style="text-decoration: none;color:#40C2FF;">TRANG CHỦ</a></div>
 <div class="nav2"><a href="../TimViec/VieclamChinhThucTamThoi.html" style="text-decoration: none;color:#000000;">TÌM VIỆC</a></div>
-<div class="nav2">THẢO LUẬN</div>
+<div class="nav2"><a href="../Blog/Blog.html" style="text-decoration: none;color:#000000;">THẢO LUẬN</a></div>
 <div class="nav3">LIÊN HỆ</div>
 </div>
 <div id="navtrai">
 <div class="dangnhap_dangbai">
-<button onclick="openLoginPopup()" style="cursor: pointer;">Đăng nhập</button>
+<button onclick="openLoginPopup()" style="cursor: pointer;">ĐĂNG NHẬP</button>
 
 </div>
-	<div class="dangky_dangxuat"><button>ĐĂNG KÝ</button></div>
+	<div class="dangky_dangxuat"><button id="openModalBtn">ĐĂNG KÝ</button></div>
 </div>
 <div id="user-info"></div>
 </div>
@@ -206,12 +259,31 @@ Bài viết mới nhất
 </table></center>
   </footer>
 
-
+<script src="JS/nhac.js"></script>
 <script src="JS/quanlyvieclamphan3.js"></script>
 <script src="JS/quanlyvieclamphan4.js"></script>
 <script src="JS/nutbam.js"></script>
-<script src="JS/nhac.js"></script>
 <script src="JS/SuLyDangNhap.js"></script>
 <script src="JS/DangNhapGG.js"></script>
+<script src="JS/SuLyPopup.js"></script>
+<script src="JS/SuLyDangKy.js"></script>
+<script>
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDEyyfIjheNTY3O7klH7tkpGKXEXm2ku4I",
+    authDomain: "dangnhap-5069e.firebaseapp.com",
+    projectId: "dangnhap-5069e",
+    storageBucket: "dangnhap-5069e.appspot.com",
+    messagingSenderId: "596384133171",
+    appId: "1:596384133171:web:4ab1b9b3bb37d0720c3346",
+    measurementId: "G-HDMQ6PJ1BN"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+
+</script>
+
+
 </body>
 </html>
