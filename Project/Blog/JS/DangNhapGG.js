@@ -1,23 +1,9 @@
- const firebaseConfig = {
-      apiKey: "AIzaSyDEyyfIjheNTY3O7klH7tkpGKXEXm2ku4I",
-      authDomain: "dangnhap-5069e.firebaseapp.com",
-      projectId: "dangnhap-5069e",
-      storageBucket: "dangnhap-5069e.firebasestorage.app",
-      messagingSenderId: "596384133171",
-      appId: "1:596384133171:web:4ab1b9b3bb37d0720c3346",
-      measurementId: "G-HDMQ6PJ1BN"
-    };
-
-
-    firebase.initializeApp(firebaseConfig);
-    const auth = firebase.auth();
-
-  
-    function signInWithGoogle1() {
+    function signInWithGoogle() {
       const provider = new firebase.auth.GoogleAuthProvider();
       auth.signInWithPopup(provider)
         .then((result) => {
           const user = result.user;
+          if (typeof closeLoginPopup === 'function') closeLoginPopup();
           document.getElementById("user-info").innerHTML = `
     <div>
     <div style="display:inline;">

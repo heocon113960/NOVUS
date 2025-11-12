@@ -52,7 +52,8 @@ body {
 
 <div class="quanly2nut">
   <center>
-<button type="button" class="nutdangnhap" onclick="kiemTraDangNhap(event)"><strong>ĐĂNG NHẬP</strong></button>      
+<button type="button" class="nutdangnhap" onclick="kiemTraDangNhap(event)"><strong>ĐĂNG NHẬP</strong></button>
+     
     <button type="button"  class="google" onclick="signInWithGoogle()"><img src="IMG/google.png" width="26px" height="26px" class="anhgg"><strong>Google</strong></button>
      
    </center>
@@ -268,7 +269,6 @@ Bài viết mới nhất
 <script src="JS/SuLyPopup.js"></script>
 <script src="JS/SuLyDangKy.js"></script>
 <script>
-
   const firebaseConfig = {
     apiKey: "AIzaSyDEyyfIjheNTY3O7klH7tkpGKXEXm2ku4I",
     authDomain: "dangnhap-5069e.firebaseapp.com",
@@ -279,11 +279,17 @@ Bài viết mới nhất
     measurementId: "G-HDMQ6PJ1BN"
   };
 
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
 
+  if (!firebase.apps || firebase.apps.length === 0) {
+    firebase.initializeApp(firebaseConfig);
+  }
+
+  window.db = firebase.firestore();
+  window.auth = firebase.auth();
 </script>
 
 
 </body>
 </html>
+
+
