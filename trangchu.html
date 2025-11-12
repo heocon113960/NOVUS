@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="./CSS/main.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="CSS/POPutLogin.css" />
+    <link rel="stylesheet" href="CSS/DangNhapGG.css" />
+    <link rel="stylesheet" href="CSS/Popupdangky.css" />
+    <link rel="stylesheet" href="CSS/phan1.css" />
+    <link rel="stylesheet" href="CSS/phan2.css" />
+    <link rel="stylesheet" href="CSS/phan3.css" />
+    <link rel="stylesheet" href="CSS/phan4.css" />
+    <link rel="stylesheet" href="CSS/phan5.css" />
+
+    <audio src="nhacnen.mp3" autoplay loop></audio>
+
+    <header></header>
+    <script src="./JS/header.js"></script>
+    
+
+    <div id="phan2_1">
+      <section class="phan2">
+        <div class="banner">
+          <div class="khungnho">
+            <h1 class="timvieclam">TÌM VIỆC LÀM</h1>
+            <p class="timmotcongviec">
+              Tìm một công việc<br />
+              phù hợp với nhu cầu của bạn
+            </p>
+            <p class="hangtramcohoi">
+              Hàng trăm cơ hội đang chờ bạn khám phá, hãy tham gia ngay cùng với
+              NOVUS nhé!!
+            </p>
+          </div>
+        </div>
+        <div class="search-box">
+          <div class="search-input-wrapper">
+            <span class="search-icon"></span>
+            <input type="text" placeholder="Hãy nhập một từ khóa" />
+          </div>
+          <button class="nuttimkiem">
+            <img src="Img/kinhlup.png" width="24" height="24" />
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <div id="phan3_2">
+      <section class="phan3">
+        <section class="hl">
+          <p class="congvieclam">
+            <strong><i>Việc Làm Nổi Bật</i></strong>
+          </p>
+          <div class="jobstable" id="jobsTable"></div>
+          <div class="quanlianh">
+            <center>
+              <img
+                id="img1"
+                src="Img/anhdai.png"
+                style="margin-right: 6.93px"
+              />
+              <img
+                id="img2"
+                src="Img/anhngan.png"
+                style="margin-right: 6.93px"
+              />
+              <img id="img3" src="Img/anhngan1.png" />
+            </center>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <section class="phan5">
+      <div class="banner2ne">
+        <h1 class="h1ne">
+          Tăng tốc hành trình tìm việc của bạn<br />cùng NOVUS — Lựa chọn công
+          việc<br />đúng với sở trường của bạn
+        </h1>
+        <p class="pne">
+          Hãy là người đầu tiên ứng tuyển hay sớm nhất <br />ứng tuyển để có cơ
+          hội lớn <br />Tìm Đến Tương Đi Đến Thành Công
+        </p>
+        <button class="nutnhanne"><strong>Tìm Việc</strong></button>
+      </div>
+    </section>
+
+    <section id="phan4">
+      <h1 class="nghetrongdiem"><i>Nghề Trọng Điểm</i></h1>
+      <section class="highlight">
+        <div class="jobs-grid" id="jobsGrid"></div>
+      </section>
+    </section>
+
+    <footer>
+    </footer>
+    <script src="./JS/footer.js"></script>
+
+    
+    <script src="JS/nhac.js"></script>
+    <script src="JS/quanlyvieclamphan3.js"></script>
+    <script src="JS/quanlyvieclamphan4.js"></script>
+    <script src="JS/nutbam.js"></script>
+    <script src="JS/SuLyDangNhap.js"></script>
+    <script src="JS/DangNhapGG.js"></script>
+    <script src="JS/SuLyPopup.js"></script>
+    <script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyDEyyfIjheNTY3O7klH7tkpGKXEXm2ku4I",
+    authDomain: "dangnhap-5069e.firebaseapp.com",
+    projectId: "dangnhap-5069e",
+    storageBucket: "dangnhap-5069e.appspot.com",
+    messagingSenderId: "596384133171",
+    appId: "1:596384133171:web:4ab1b9b3bb37d0720c3346",
+    measurementId: "G-HDMQ6PJ1BN"
+  };
+
+
+  if (!firebase.apps || firebase.apps.length === 0) {
+    firebase.initializeApp(firebaseConfig);
+  }
+
+  window.db = firebase.firestore();
+  window.auth = firebase.auth();
+</script>
+
+<script>
+  // Hàm logout chung
+function logoutUser() {
+  // Xóa localStorage liên quan
+  ['daDangNhap','username','avt'].forEach(k => localStorage.removeItem(k));
+
+  // Nếu dùng Firebase Auth: sign out
+  if (window.firebase && firebase.auth) {
+    firebase.auth().signOut().catch(err => console.error('Sign-out error', err));
+  }
+
+  // Cập nhật UI: hiện lại navtrai, xóa user-info
+  const navtrai = document.getElementById('navtrai');
+  if (navtrai) navtrai.style.display = 'block';
+
+  const userInfo = document.getElementById('user-info');
+  if (userInfo) userInfo.innerHTML = '';
+
+  // Nếu popup login nên hiện lại nút đăng nhập, hoặc reload trang nếu bạn muốn
+  // location.reload(); // <- bật nếu bạn muốn reload hoàn toàn
+}
+
+// Gắn sự kiện cho nút avatar hiện có hoặc được tạo động
+function attachLogoutToAvatar() {
+  // nút avatar chính: .nutavt1 (nếu bạn có nhiều, có thể dùng querySelectorAll)
+  const btn = document.querySelector('.nutavt1');
+  if (btn) {
+    // tránh gắn nhiều lần
+    btn.removeEventListener('click', logoutUser);
+    btn.addEventListener('click', logoutUser);
+  }
+}
+
+// Gắn khi DOM sẵn sàng
+document.addEventListener('DOMContentLoaded', () => {
+  attachLogoutToAvatar();
+
+  // Nếu avatar được render sau khi đăng nhập (ví dụ bạn thay innerHTML),
+  // gọi attachLogoutToAvatar() sau khi render avatar. Ví dụ trong onAuthStateChanged:
+  // hoặc gắn observer để tự động gắn khi #user-info thay đổi:
+  const userInfo = document.getElementById('user-info');
+  if (userInfo) {
+    const observer = new MutationObserver(() => attachLogoutToAvatar());
+    observer.observe(userInfo, { childList: true, subtree: true });
+  }
+  
+});
+
+</script>
+
+  </body>
+</html>
