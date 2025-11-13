@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="./CSS/main.css" />
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="CSS/QuanLyPopup.css" />
+    <link rel="stylesheet" href="CSS/phanbodytrangchu.css" />
+
+    <audio src="nhacnen.mp3" autoplay loop></audio>
+
+    <header></header>
+    <script src="./JS/header.js"></script>
+    <!-- <template id="profile-popup-template">
+  <div class="profile-popup-backdrop" role="dialog" aria-modal="true">
+    <div class="profile-popup" style="width:424px; height:325px;" role="document">
+      <button class="profile-close" aria-label="Đóng">&times;</button>
+
+      <div class="profile-top">
+        <div class="profile-left">
+          <div class="profile-name">Tên Nhà Tuyển Dụng</div>
+          <div class="profile-approved">Tài khoản tuyển dụng đã được duyệt</div>
+          <div class="profile-info">
+            <div><strong>Email:</strong> User1@gmail.com</div>
+            <div><strong>SĐT:</strong> 01234567890</div>
+          </div>
+        </div>
+        <div class="profile-avatar">
+          <img src="${avt || 'Img/matdinh.png'}" alt="Avatar" />
+        </div>
+      </div>
+
+      <div class="profile-body">
+        <div class="profile-language">
+          <img src="Img/vietnam-flag.png" alt="VN" class="flag"> Tiếng Việt
+        </div>
+        <nav class="profile-menu">
+          <button class="profile-menu-item">Cài đặt</button>
+          <button class="profile-menu-item">Chính sách và hướng dẫn</button>
+        </nav>
+      </div>
+
+      <div class="profile-footer">
+        <button class="btn-logout">ĐĂNG XUẤT</button>
+      </div>
+    </div>
+  </div>
+</template> -->
+
+    <div id="phan2_1">
+      <section class="phan2">
+        <div class="banner">
+          <div class="khungnho">
+            <h1 class="timvieclam">TÌM VIỆC LÀM</h1>
+            <p class="timmotcongviec">
+              Tìm một công việc<br />
+              phù hợp với nhu cầu của bạn
+            </p>
+            <p class="hangtramcohoi">
+              Hàng trăm cơ hội đang chờ bạn khám phá, hãy tham gia ngay cùng với
+              NOVUS nhé!!
+            </p>
+          </div>
+        </div>
+        <div class="search-box">
+          <div class="search-input-wrapper">
+            <span class="search-icon"></span>
+            <input type="text" placeholder="Hãy nhập một từ khóa" />
+          </div>
+          <button class="nuttimkiem">
+            <img src="Img/kinhlup.png" width="24" height="24" />
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <div id="phan3_2">
+      <section class="phan3">
+        <section class="hl">
+          <p class="congvieclam">
+            <strong><i>Việc Làm Nổi Bật</i></strong>
+          </p>
+          <div class="jobstable" id="jobsTable"></div>
+          <div class="quanlianh">
+            <center>
+              <img
+                id="img1"
+                src="Img/anhdai.png"
+                style="margin-right: 6.93px"
+              />
+              <img
+                id="img2"
+                src="Img/anhngan.png"
+                style="margin-right: 6.93px"
+              />
+              <img id="img3" src="Img/anhngan1.png" />
+            </center>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <section class="phan5">
+      <div class="banner2ne">
+        <h1 class="h1ne">
+          Tăng tốc hành trình tìm việc của bạn<br />cùng NOVUS — Lựa chọn công
+          việc<br />đúng với sở trường của bạn
+        </h1>
+        <p class="pne">
+          Hãy là người đầu tiên ứng tuyển hay sớm nhất <br />ứng tuyển để có cơ
+          hội lớn <br />Tìm Đến Tương Đi Đến Thành Công
+        </p>
+        <button class="nutnhanne"><strong>Tìm Việc</strong></button>
+      </div>
+    </section>
+
+    <section id="phan4">
+      <h1 class="nghetrongdiem"><i>Đề Xuất Ngành Nghề</i></h1>
+      <section class="highlight">
+        <div class="jobs-grid" id="jobsGrid"></div>
+      </section>
+    </section>
+
+    <footer>
+    </footer>
+    <script src="./JS/footer.js"></script>
+
+    
+    <script src="JS/nhac.js"></script>
+    <script src="JS/quanlyvieclamphan3.js"></script>
+    <script src="JS/quanlyvieclamphan4.js"></script>
+    <script src="JS/nutbam.js"></script>
+    <script src="JS/SuLyDangNhap.js"></script>
+    <script src="JS/DangNhapGG.js"></script>
+    <script src="JS/SuLyPopup.js"></script>
+
+
+
+
+
+  </body>
+</html>

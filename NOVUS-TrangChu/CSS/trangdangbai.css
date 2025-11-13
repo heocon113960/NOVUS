@@ -1,0 +1,279 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #f5f8fa;
+  color: #333;
+}
+
+/* MAIN LAYOUT */
+.main-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.form-area {
+  flex: 1;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.banner-right {
+  flex-shrink: 0;
+  width: 300px;
+}
+
+.banner-right img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+/* FORM */
+
+
+h1 {
+  font-size: 36px;
+  color: #000;
+  margin-bottom: 30px;
+  text-align: left;
+}
+h2 {
+  font-size: 20px;
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+.form-group {
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #f9f9f9;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input:hover,
+select:hover {
+  border-color: #1ba0f4;
+}
+input:focus,
+select:focus {
+  border-color: #1ba0f4;
+  background: #fff;
+  box-shadow: 0 0 0 2px rgba(27, 160, 244, 0.2);
+  outline: none;
+}
+
+/* INPUT ROW */
+.input-row {
+  display: flex;
+  gap: 20px;
+}
+.input-row input {
+  flex: 1;
+}
+
+/* CHECKBOX */
+.checkbox-group {
+  margin-bottom: 40px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-top: 4px;
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+}
+
+.checkbox-item label {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.5;
+  flex: 1;
+}
+
+.checkbox-item a {
+  color: #1ba0f4;
+  text-decoration: none;
+}
+
+/* BUTTON */
+.form-actions.sticky {
+  position: sticky;
+  bottom: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.form-actions button {
+  background: linear-gradient(90deg, #1ba0f4 0%, #5ac9ff 54.33%, #22a4f5 100%);
+  border-radius: 50px;
+  color: white;
+  font-size: 18px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(27, 160, 244, 0.2);
+  transition: all 0.3s ease;
+}
+.form-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(27, 160, 244, 0.3);
+}
+.checkbox-group a {
+  color: #1ba0f4;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.checkbox-group span {
+  color: inherit;
+  font-weight: normal;
+}
+
+/* POPUP */
+#popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1ba0f4;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  z-index: 9999;
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #navtong {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  #navgiua {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  #navphai {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .navphaidangnhap,
+  .navphaidangky {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .main-layout {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .banner-right {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .form-area {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .input-row {
+    flex-direction: column;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #000;
+}
+
+.logo-footer {
+  width: 189px;
+  height: 29px;
+  justify-content: space-around;
+  display: flex;
+}
+
+.logo-phone,
+.logo-instagram {
+  width: 25px;
+  height: 25px;
+}
+.logo-mail {
+  width: 30px;
+  height: 29px;
+}
