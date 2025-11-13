@@ -7,7 +7,6 @@
                 font-family: 'Inter';
                 font-weight: 600;
                 color: transparent;
-                
             }
             header
             {
@@ -51,10 +50,11 @@
                 height: 61px;
                 color: #3d3d3d;
                 font-size: 50px;
+                margin-bottom: 20px;
             }
             .anhdangki
             {
-                margin-top: 29px;
+                margin-top: 20px;
                 width: 393px;
                 height: 878px;
             }
@@ -88,6 +88,7 @@
             }
             .or 
             {
+                line-height: 1;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -107,14 +108,33 @@
                 width: 100%;
                 content: "";
             }
-            .hovaten
+            .ho_voi_ten
+            {
+                width: 100%;
+                height: 53px;
+                display: flex;
+                gap:7px;
+                justify-content: center;
+                align-items: center;
+                margin-top: 20px;
+                
+            }
+            .ho_voi_ten input
+            {
+                width: 383px;
+                height: 53px;
+                border: 1px solid #6b6b6b;
+                border-radius: 8px;
+                background-color: white;
+            }
+            .ten_dang_nhap
             {
                 width: 773px;
                 height: 53px;
                 border: 1px solid #6b6b6b;
                 border-radius: 8px;
                 background-color: white;
-                margin-top: 8px;
+                margin-top: 20px;
             }
             input::placeholder
             {
@@ -132,7 +152,7 @@
                 height: 53px;
                 border-radius: 8px;
                 background-color: white;
-                margin-top: 33px;
+                margin-top: 20px;
             }
             .password
             {
@@ -141,7 +161,7 @@
                 height: 53px;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 7px;
-                margin-top: 33px;
+                margin-top: 20px;
             }
             .nhappassword
             {
@@ -173,7 +193,7 @@
                 height: 53px;
                 border-radius: 8px;
                 background-color: white;
-                margin-top: 33px;
+                margin-top: 20px;
             }
             .thongbao
             {
@@ -181,8 +201,8 @@
                 font-size: 20px;
                 display: flex;
                 align-items: center;
-                margin-top: 30px;
-                margin-bottom: 5px;
+                margin-top: 25px;
+                margin-bottom: 15px;
                 gap: 14px;
             }
             .thongbao input
@@ -194,19 +214,19 @@
                 border-radius: 8px;
                 flex-shrink: 0;
                 cursor: pointer;
+                position: relative;
             }
             .thongbao input:checked
             {
-                background-color:blue;
+                background-color:#1379FF;
             }
-            .thongbao input::after
+            .thongbao input:checked::after
             {
                 content: "✔";
                 color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 font-size: large;
+                position: absolute;
+                right: 25%;
             }
             .thoathuan
             {
@@ -225,19 +245,19 @@
                 border-radius: 8px;
                 flex-shrink: 0;
                 cursor: pointer;
+                position: relative;
             }
             .thoathuan input:checked
             {
-                background-color:blue;
+                background-color:#016fff;
             }
-            .thoathuan input::after
+            .thoathuan input:checked::after
             {
                 content: "✔";
                 color: white;
-                display: flex;
-                align-items: center;
-                justify-content: center;
                 font-size: large;
+                position: absolute;
+                right: 25%;
             }
             .thoathuan a 
             {
@@ -251,8 +271,8 @@
                 align-items: center;
                 color: #9f9f9f;
                 font-size: 20px;
-                margin-top: 21px;
-                margin-bottom: 36px;
+                margin-top: 20px;
+                margin-bottom: 20px;
             }
             .ntd a
             {
