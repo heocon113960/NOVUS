@@ -1,0 +1,225 @@
+.phan_khung
+{
+    width: 1068px;
+    height: 918px;
+    font-family: "Inter";
+    padding: 0px 58px 38px 58px;
+}
+.tieu_de
+{
+    font-size: 40px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1068px;
+    height: 105px;
+    background-color: #cbeeff;
+    font-family: "Inter";
+}
+.nop_cv
+{
+    padding: 20px 0px 40px 0px;
+    width: 952px;
+    height: 492px;
+}
+.huong_dan
+{
+    font-size: 32px;
+    font-weight: 500;
+}
+.khung_nhap
+{
+    width: 952px;
+    height: 435px;
+    border: 3px solid #40C2FF;
+    border-radius: 8px;
+    padding: 12px 51px 31px 51px;
+    box-sizing: border-box;
+    justify-content: center;
+}
+.chon_cv
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.chon_cv button
+{
+    width: 136px;
+    height: 47px;
+    background-color: #cbeeff;
+    font-size: 24px;
+    font-weight: 500;
+    border: transparent;
+}
+.lua_chon
+{
+    width: 100%;
+    height: 67px;
+    display: flex;
+    font-size: 24px;
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.lua_chon img
+{
+    width: 67px;
+    height: auto;
+}
+.nhac_nho
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 16px 0px 16px 0px;
+    width: 850px;
+    height: 24px;
+}
+.loi_nhac
+{
+    font-size: 20px;
+    color: #0379fc;
+    justify-content: center;
+    white-space: nowrap;
+}
+.chu_y
+{
+    font-size: 16px;
+    color: #ff0000;
+    justify-content: center;
+}
+.nhap_thong_tin
+{
+    display: flex;
+    gap: 40px;
+    align-items: flex-start ;
+}
+
+.ho_ten
+{
+    width: 850px;
+    height: 87px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+.ho_ten input
+{
+    border: 1px solid #40c2ff;
+    border-radius: 8px;
+    width: 850px;
+    height: 48px;
+    font-size: 20px;
+    padding-left: 15px;
+}
+.ho_ten input::placeholder
+{
+    font-size: 20px;
+    color: #808080;
+    font-weight: 400;
+    font-family: 'Inter';
+}
+.mail
+{
+    width: 405px;
+    height: 87px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+.mail input
+{
+    border: 1px solid #40c2ff;
+    border-radius: 8px;
+    width: 405px;
+    height: 48px;
+    font-size: 20px;
+    padding-left: 15px;
+}
+.mail input::placeholder
+{
+    font-size: 20px;
+    color: #808080;
+    font-weight: 400;
+    font-family: 'Inter';
+}
+.dt
+{
+    width: 405px;
+    height: 87px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 16px;
+}
+.dt input
+{
+    border: 1px solid #40c2ff;
+    border-radius: 8px;
+    width: 405px;
+    height: 48px;
+    font-size: 20px;
+    padding-left: 15px;
+}
+.dt input::placeholder
+{
+    font-size: 20px;
+    color: #808080;
+    font-weight: 400;
+    font-family: 'Inter';
+}
+.thu_gt
+{
+    font-size: 32px;
+    font-weight: 500;
+}
+.thu_gt textarea
+{
+    width: 952px;
+    height: auto;
+    border: 3px solid #40c2ff;
+    border-radius: 8px;
+    margin-bottom: 47px;
+    box-sizing: border-box;
+    font-size: 20px;
+    resize: none;
+    padding: 12px 15px 91px 15px;
+    overflow-y: hidden;
+}
+.thu_gt textarea::placeholder
+{
+    font-size: 20px;
+    color: #808080;
+    font-weight: 400;
+    font-family: 'Inter';
+    padding: 12px 15px 91px 15px;
+}
+.huy_va_nop
+{
+    display: flex;
+    align-items: center;
+    gap: 31px;
+}
+.huy
+{
+    width: 106px;
+    height: 75px;
+    background-color: #808080;
+    border-radius: 8px;
+    font-size: 26px;
+    font-weight: 600;
+    border: transparent;
+}
+.nop 
+{
+    width: 815px;
+    height: 75px;
+    background-color: #cbeeff;
+    border-radius: 8px;
+    font-size: 26px;
+    font-weight: 600;
+    border: transparent;
+}
