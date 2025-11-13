@@ -111,7 +111,7 @@ let headerInnerHTML = `
 
 
           <section id="nav">
-            <a href="#">Trang Chủ</a>
+            <a href="trangchu.html">Trang Chủ</a>
             <a href="#">Tìm Việc</a>
             <a href="#">Thảo Luận</a>
             <a href="#">Liên hệ</a>
