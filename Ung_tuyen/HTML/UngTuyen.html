@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang = "vi">
+    <head>
+        <title>Ung_tuyen</title>
+        <meta charset="UTF-8">
+        <link href = "Ungtuyen.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class ="tieu_de">Ứng tuyển</header>
+        <form class ="phan_khung">    
+            <div class ="nop_cv">
+                <p class = "huong_dan">Nộp CV để ứng tuyển</p>
+                <div class ="khung_nhap">
+                    <div class = "lua_chon">
+                    <img src ="upload.png">
+                    <p>Tải lên CV từ máy tính</p>
+                    </div>
+                    <div class = "chon_cv">
+                    <button>Chọn CV</button>
+                    </div>
+                    <div class = "nhac_nho">
+                        <p class = "loi_nhac">Vui lòng nhập đầy đủ thông tin:</p>
+                        <p class = "chu_y">thông tin bắt buộc(*)</p>
+                    </div>
+                        <div class ="ho_ten">
+                            <p>Họ và tên<span class = "chu_y">*</span></p>
+                            <input required = "text" placeholder="Họ tên hiển thị với NTD" title="Vui lòng nhập họ và tên của bạn">
+                        </div>
+                        
+                        <section class ="nhap_thong_tin">
+                        <div class = mail>
+                            <p>Email<span class = "chu_y">*</span></p>
+                            <input required type = "text" placeholder="Email hiển thị với NTD" title="Nhập email bạn muốn dùng để liên lạc">
+                        </div>
+                        <div class = dt>
+                            <p>Số điện thoại<span class = "chu_y">*</span></p>
+                            <input required type ="text" placeholder="Số điện thoại hiển thị với NTD" title="Nhập số điện thoại bạn muốn dùng để liên lạc">
+                        </div>
+                        </section>
+                </div>
+            </div>
+            <div class ="thu_gt">
+                <p>Thư giới thiệu</p>
+                <textarea placeholder="Viết giới thiệu ngắn gọn về bản thân (điểm mạnh, điểm yếu) và lý do bạn muốn ứng tuyển cho vị trí này"></textarea>
+            </div>
+            <div class ="huy_va_nop">
+                <input class = "huy" type ="submit" value="Hủy">
+                <input class = "nop" type="submit" value ="Nộp hồ sơ ứng tuyển">
+            </div>
+        </form>
+    </body>
+</html>
